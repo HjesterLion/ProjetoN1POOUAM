@@ -9,7 +9,7 @@ package trabalho;
  *
  * @author nakaz
  */
-public class Monstros {
+public class Monstros{
     public String nome;
     public String tipo;
     public int vida;
@@ -33,6 +33,10 @@ public class Monstros {
         System.out.println("Forca: "+forca);
         System.out.println("Defesa: "+ defesa);
         System.out.println("Velocidade: "+velocidade);
+        System.out.println("-------------------");
+        
+    }
+    public void batalha(){
         
     }
     

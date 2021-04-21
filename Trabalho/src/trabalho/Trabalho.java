@@ -12,11 +12,13 @@ package trabalho;
 public class Trabalho {
 
     public static void main(String[] args) {
-        Rajang rajang = new Rajang("Rajang","Raio",100,50,50,75);
-        Ratian ratian = new Ratian("Ratian", "Fogo",100,75,30,30);
-        Kajatchi kajatchi = new Kajatchi("Kajatchi","Agua",150,30,80,15);
-        rajang.print();
-        kajatchi.ataque1();
+
+        Jogador jogador1 = new Jogador("Rajang", "Ratian","Kajatchi");
+        Jogador jogador2 = new Jogador("Ratian", "Rajang","Kajatchi");
+        jogador1.MostrarMonstro();
+        jogador2.MostrarMonstro();
+        
+        
         
     }
     
