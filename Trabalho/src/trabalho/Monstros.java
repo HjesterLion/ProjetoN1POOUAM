@@ -36,9 +36,4 @@ public class Monstros{
         System.out.println("-------------------");
         
     }
-    public void batalha(){
-        
-    }
-    
-    
 }
