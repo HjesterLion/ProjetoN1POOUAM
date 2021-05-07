@@ -67,23 +67,21 @@ public class Monstros {
         return dano;
     }
 
-    public void batalha(Monstros monstro1, Monstros monstro2,int escolhaAtaque) {
+    public boolean batalha(Monstros monstro1, Monstros monstro2,int escolhaAtaque) {
         if (escolhaAtaque == 1) {
             monstro2.vida -= monstro1.ataque1(monstro1, monstro2);
-            verificaNocaute(monstro2);
+            return verificaNocaute(monstro2);
        }
-        if (escolhaAtaque == 2) {
+        else {
             monstro2.vida -= monstro1.ataque2(monstro1, monstro2);
-            verificaNocaute(monstro2);
+            return verificaNocaute(monstro2);
        }
-       
-        
     }
 
     public int verificaElemento(Monstros monstro1, Monstros monstro2, int dano, String tipoAtaque) {
         int danoElemento;
         if (tipoAtaque.equals("Agua")) {
-            if (monstro2.tipo == "Ar") {
+            if ("Ar".equals(monstro2.tipo)) {
                 danoElemento = dano / 2;
                 return danoElemento;
             }
@@ -95,7 +93,7 @@ public class Monstros {
             }
         }
         if (tipoAtaque.equals("Fogo")) {
-            if (monstro2.tipo == "Agua") {
+            if ("Agua".equals(monstro2.tipo)) {
                 danoElemento = dano / 2;
                 return danoElemento;
             }
@@ -108,7 +106,7 @@ public class Monstros {
             }
         }
         if (tipoAtaque.equals("Planta")) {
-            if (monstro2.tipo == "Fogo") {
+            if ("Fogo".equals(monstro2.tipo)) {
                 danoElemento = dano / 2;
                 return danoElemento;
             }
@@ -121,7 +119,7 @@ public class Monstros {
 
         }
         if (tipoAtaque.equals("Raio")) {
-            if (monstro2.tipo == "Planta") {
+            if ("Planta".equals(monstro2.tipo)) {
                 danoElemento = dano / 2;
                 return danoElemento;
             }
@@ -134,7 +132,7 @@ public class Monstros {
 
         }
         if (tipoAtaque.equals("Ar")) {
-            if (monstro2.tipo == "Raio") {
+            if ("Raio".equals(monstro2.tipo)) {
                 danoElemento = dano / 2;
                 return danoElemento;
             }
@@ -145,17 +143,20 @@ public class Monstros {
                 return danoElemento = dano * 1;
             }
 
-        } else {
+        } 
+        else {
             return danoElemento = dano * 1;
         }
 
     }
 
-    public void verificaNocaute(Monstros monstro) {
+    public boolean verificaNocaute(Monstros monstro) {
         if (monstro.vida > 0) {
             System.out.println("vida do Monstro eh " + monstro.vida);
+            return false;
         } else {
             System.out.println("Monstro derrotado");
+            return true;
         }
     }
 }

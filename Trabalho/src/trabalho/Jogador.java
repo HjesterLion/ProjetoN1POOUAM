@@ -25,31 +25,29 @@ public class Jogador {
         this.Monstro3 = Monstro3;
         this.monstroAtual = monstroAtual;
     }
-
-   /* public void MostrarMonstro() {
-        if ("Rajang".equals(monstroAtual.nome)) {
-            rajang.print();
-
-        }
-        if ("Ratian".equals(monstroAtual.nome)) {
-            ratian.print();
-        }
-        if ("Kajatchi".equals(monstroAtual.nome)) {
-
-            kajatchi.print();
-        }
-    }*/
-
     public Monstros Troca(int numero) {
-        if (numero == 1) {
+        if (numero == 1 && Monstro1.vida > 0) {
             this.monstroAtual = this.Monstro1;
         }
-        if (numero == 2) {
+        if (numero == 2 && Monstro2.vida > 0) {
             this.monstroAtual = this.Monstro2;
         }
-        if (numero == 3) {
+        if (numero == 3 && Monstro3.vida > 0) {
             this.monstroAtual = this.Monstro3;
         }
+        else{
+            System.out.println("Não tem como trocar");
+            return this.monstroAtual;
+        }
         return this.monstroAtual;
+    }
+    public boolean todosMonstrosMorto(){
+        if(this.Monstro1.vida <= 0 &&this.Monstro2.vida <= 0&& this.Monstro3.vida <= 0){
+            System.out.println("Todos os Monstros foram Derrotados");
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }
