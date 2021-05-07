@@ -19,8 +19,13 @@ public class Trabalho {
 
         Jogador jogador1 = new Jogador(rajang,ratian,kajatchi,rajang);
         Jogador jogador2 = new Jogador(ratian,rajang,kajatchi,ratian);
-        jogador1.MostrarMonstro();
-        jogador1.monstroAtual.batalha(jogador1.monstroAtual, jogador2.monstroAtual);
+        jogador1.monstroAtual.batalha(jogador1.monstroAtual, jogador2.monstroAtual,3);
+        //jogador1.monstroAtual.batalha(jogador1.monstroAtual, jogador2.monstroAtual,2);
+        jogador2.monstroAtual.print();
+        jogador1.Troca(3);
+        jogador1.monstroAtual.print();
+        //jogador1.monstroAtual.batalha(jogador1.monstroAtual, jogador2.monstroAtual,1);
+        jogador2.monstroAtual.print();
         
     }
     

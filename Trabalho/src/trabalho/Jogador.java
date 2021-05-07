@@ -26,7 +26,7 @@ public class Jogador {
         this.monstroAtual = monstroAtual;
     }
 
-    public void MostrarMonstro() {
+   /* public void MostrarMonstro() {
         if ("Rajang".equals(monstroAtual.nome)) {
             rajang.print();
 
@@ -38,7 +38,7 @@ public class Jogador {
 
             kajatchi.print();
         }
-    }
+    }*/
 
     public Monstros Troca(int numero) {
         if (numero == 1) {

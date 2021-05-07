@@ -54,7 +54,7 @@ public class Monstros {
 
         int dano;
         String tipoAtaque = monstro1.tipoAtaque1;
-        dano = (monstro1.poder1 * monstro1.forca) / monstro2.defesa;
+        dano = (monstro1.poder1 + monstro1.forca) - monstro2.defesa;
         dano = verificaElemento(monstro1, monstro2, dano, tipoAtaque);
         return dano;
     }
@@ -62,17 +62,22 @@ public class Monstros {
     public int ataque2(Monstros monstro1, Monstros monstro2) {
         String tipoAtaque = monstro1.tipoAtaque2;
         int dano;
-        dano = (monstro1.poder2 + monstro1.forca) / monstro2.defesa;
+        dano = (monstro1.poder2 + monstro1.forca) - monstro2.defesa;
         dano = verificaElemento(monstro1, monstro2, dano, tipoAtaque);
         return dano;
     }
 
-    public void batalha(Monstros monstro1, Monstros monstro2) {
-        if (monstro1.velocidade >= monstro2.velocidade) {
+    public void batalha(Monstros monstro1, Monstros monstro2,int escolhaAtaque) {
+        if (escolhaAtaque == 1) {
             monstro2.vida -= monstro1.ataque1(monstro1, monstro2);
             verificaNocaute(monstro2);
-        }
-
+       }
+        if (escolhaAtaque == 2) {
+            monstro2.vida -= monstro1.ataque2(monstro1, monstro2);
+            verificaNocaute(monstro2);
+       }
+       
+        
     }
 
     public int verificaElemento(Monstros monstro1, Monstros monstro2, int dano, String tipoAtaque) {
