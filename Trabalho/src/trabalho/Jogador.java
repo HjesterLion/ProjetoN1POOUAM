@@ -18,6 +18,9 @@ public class Jogador {
     Monstros rajang = new Monstros("Rajang", "Raio", 100, 50, 50, 75, "Cuspida de Raio", "Raio", 50, "Soco Furioso", "Normal", 30);
     Monstros ratian = new Monstros("Ratian", "Fogo", 100, 75, 30, 30, "Rajada de fogo", "Fogo", 75, "Brasa", "Fogo", 15);
     Monstros kajatchi = new Monstros("Kajatchi", "Agua", 150, 30, 80, 15, "Rajada de agua", "Agua", 35, "Bolha", "Agua", 20);
+    Monstros phaedra = new Monstros("Phaedra", "Planta", 100, 30, 70, 10, "Clorofila", "Planta", 50, "Rajada de Folhas", "Planta", 30);
+        Monstros avion = new Monstros("Avion", "Ar", 130, 25, 90, 70, "Investida", "Ar", 50, "Tornado", "Ar", 30);
+        Monstros argus = new Monstros("Argus", "Normal", 100, 80, 80, 10, "Soco Mortal", "Normal", 50, "Espada Lacerante", "Normal", 30);
     public Jogador(Monstros Monstro1, Monstros Monstro2, Monstros Monstro3, Monstros monstroAtual) {
         this.Monstro1 = Monstro1;
         this.Monstro2 = Monstro2;
