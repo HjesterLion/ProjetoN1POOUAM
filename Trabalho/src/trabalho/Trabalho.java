@@ -76,7 +76,6 @@ public class Trabalho {
                     System.out.println("Escolhar seu ataque: ");
                     do {
 
-                        System.out.println("repetiu");
                         escolhaJogador1 = entrada.nextInt();
                     } while (escolhaJogador1 < 1 || escolhaJogador1 > 2);
                     nocaute = jogador1.monstroAtual.batalha(jogador1.monstroAtual, jogador2.monstroAtual, escolhaJogador1);
@@ -85,7 +84,7 @@ public class Trabalho {
                     if (nocaute == false) {
                         jogador2.monstroAtual.mostrarAtaques();
                         System.out.println("Jogador 2 ");
-                        System.out.println("Escolhar seu ataque: ");
+                        System.out.println("Escolha seu ataque: ");
                         do {
                             escolhaJogador2 = entrada.nextInt();
                         } while (escolhaJogador2 < 1 || escolhaJogador2 > 2);
@@ -122,7 +121,7 @@ public class Trabalho {
                 } else {
                     jogador2.monstroAtual.mostrarAtaques();
                     System.out.println("Jogador 2 ");
-                    System.out.println("Escolhar seu ataque: ");
+                    System.out.println("Escolha seu ataque: ");
                     do {
                         escolhaJogador2 = entrada.nextInt();
                     } while (escolhaJogador2 < 1 || escolhaJogador2 > 2);
@@ -132,7 +131,7 @@ public class Trabalho {
                     if (nocaute == false) {
                         jogador1.monstroAtual.mostrarAtaques();
                         System.out.println("Jogador 1 ");
-                        System.out.println("Escolhar seu ataque: ");
+                        System.out.println("Escolha seu ataque: ");
                         do {
                             escolhaJogador1 = entrada.nextInt();
                         } while (escolhaJogador1 > 1 || escolhaJogador1 < 2);
@@ -174,7 +173,7 @@ public class Trabalho {
             if (escolhaJogador1 == 1 && turnoJogador1 == 0) {
                 jogador1.monstroAtual.mostrarAtaques();
                 System.out.println("Jogador 1 ");
-                System.out.println("Escolhar seu ataque: ");
+                System.out.println("Escolha seu ataque: ");
                 do {
                     escolhaJogador1 = entrada.nextInt();
                 } while (escolhaJogador1 < 1 || escolhaJogador1 > 2);
@@ -199,7 +198,7 @@ public class Trabalho {
             if (escolhaJogador2 == 2 && turnoJogador2 == 0) {
                 jogador2.monstroAtual.mostrarAtaques();
                 System.out.println("Jogador 2 ");
-                System.out.println("Escolhar seu ataque: ");
+                System.out.println("Escolha seu ataque: ");
                 do {
                     escolhaJogador2 = entrada.nextInt();
                 } while (escolhaJogador2 > 1 || escolhaJogador2 < 2);
@@ -221,7 +220,7 @@ public class Trabalho {
             }
             turnoJogador1 = 0;
             turnoJogador2 = 0;
-        } while (jogador1.todosMonstrosMorto() == false || jogador2.todosMonstrosMorto() == false);
+        } while (jogador1.todosMonstrosMorto() == false && jogador2.todosMonstrosMorto() == false);
 
         if (jogador1.todosMonstrosMorto() == true) {
             System.out.println("Vencedor é o Jogador 2");
