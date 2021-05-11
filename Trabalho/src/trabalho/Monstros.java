@@ -49,19 +49,6 @@ public class Monstros {
         System.out.println("-------------------");
 
     }
-    public void mostrarAtaques(){
-        System.out.println("----------------------------------");
-        System.out.println("Ataque 1");
-        System.out.println("Nome do ataque 1: "+ nomeAtaque1);
-        System.out.println("Tipo do ataque 1: "+ tipoAtaque1);
-        System.out.println("Poder do ataque 1: "+ poder1);
-        System.out.println("----------------------------------");
-        System.out.println("Ataque 2");
-        System.out.println("Nome do ataque 2: "+ nomeAtaque2);
-        System.out.println("Tipo do ataque 2: "+ tipoAtaque2);
-        System.out.println("Poder do ataque 2: "+ poder2);
-        System.out.println("-------------------------------");
-    }
 
     public int ataque1(Monstros monstro1, Monstros monstro2) {
 
